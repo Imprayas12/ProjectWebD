@@ -1,0 +1,24 @@
+.navbar-brand {
+    margin-left: 10%;
+    color: aliceblue;
+    font-family: auto;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.align-icons {
+    margin-right: 50px;
+}
+.bg-image {
+    width:80%; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    border-image: auto; 
+    -webkit-border-image: -webkit-radial-gradient(circle, white, black) 
+                          -webkit-linear-gradient(top left, white, black) 
+                          -webkit-linear-gradient(top right, white, black);
+}
