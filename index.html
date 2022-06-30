@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/fontawesome.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="background-color: linear-gradient(to-right,black,white)">
     <!-- This is the homepage for the shopping website. -->
         <div class = "card">
-        <nav class = "navbar navbar-expand-lg bg-dark navbar-dark py-4">
-            <a class = "navbar-brand" href="" style="font-size: 40;">HOPPER</a>
+        <nav class = "navbar fixed-top navbar-expand-lg bg-dark navbar-dark py-4">
+            <a class = "navbar-brand" href="" style="font-size: 50;">HOPPER</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
             
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class = "navbar-nav ml-auto">
                 <li class = "nav-item active align-icons">
                     <a class = "nav-link" href="">Home</a>
@@ -33,6 +38,11 @@
                 </li>
                 <li class = "nav-item active align-icons">
                     <a class = "nav-link" href="">About Us</a>
+                </li>
+                <li class = "nav-item align-icons">
+                  <a href="index.html">
+                  <img src="assets\shopping-cart.png" alt="shopping-cart" height="30px" width="30px" style="padding-top: 5px;" srcset="">
+                </a>
                 </li>
                 <!-- <li class = "navbar-brand">
                     <a class = "nav-link" href="index.html">
@@ -62,20 +72,118 @@
             <a href="#" class="btn btn-primary">Shop now</a>
           </div>
     </div> -->
-    <div class = "containter">
+    <div id="banner">
             <img src="assets\imani-bahati-LxVxPA1LOVM-unsplash.jpg" alt="shoe-banner" class="bg-image">
             <div class="centered">
                 <div class = "card text-center" style="background: transparent; border: none;">
                 <div class="card-body" style="border: none;">
-                    <h5 class="card-title display-4" style="font-weight: bold;" >Upto 80% off this summer.</h5>
+                    <h5 class="card-title display-4" style="font-weight: bold;" >Upto 80% off, this summer!</h5>
                     <br>
-                    <p class="card-text display-6" >Grab your favourite pair right now</p>
+                    <p class="card-text" style="font-size:40 ;" >Grab your favourite pair right now</p>
                     <br>
-                    <a href="#" class="btn btn-dark">Buy Now</a>
+                    <a href="#" class="btn btn-dark" id="banner-btn">Shop Now</a>
                   </div>
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <!-- Categories -->
+    <br><br><br><br>
+    <p class = "display-2 text-center">Categories</p>
+    <br><br><br>
+    <div class="fade_rule"></div>  
+    <br><br><br>
+    <div class="fade_rule"></div>  
+    <br><br>
+  <div class = "row banner">
+      <div class="container column">
+      <img src="assets\Categories\male.jpg" alt="Men">
+      <button class="btn">Men</button>
+    </div>
+    <div class="container column">
+      <img src="assets\Categories\female.jpg" alt="Women">
+      <button class="btn">Women</button>
+    </div>
+    <div class="container column">
+      <img src="assets\Categories\unisex.jpg" alt="Unisex">
+      <button class="btn">Unisex</button>
+    </div>
+    <!-- <div class="container column">
+      <img src="assets\Categories\all.jpg" alt="Multipurpose">
+      <button class="btn">Multipurpose</button>
+    </div> -->
+  </div>
+  <br><br><br><br>
+    <p class = "display-2 text-center">New Arrivals</p> 
+    <br><br>
+    <div class="fade_rule"></div>  
+    <br>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" style="width:80% ;" id="navbarsExample10">
+        <ul class="navbar-nav">
+          <li class="nav-item active list-item">
+            <a class="nav-link active" href="#">Men <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item list-item">
+            <a class="nav-link active" href="#">Women</a>
+          </li>
+          <li class="nav-item list-item">
+            <a class="nav-link active" href="#">Unisex</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <div class="objects">
+  </div>
+
+<br><br>
+<p class="display-2 text-center">Latest Blogs</p>
+    <br><br><br>
+    <div class="fade_rule"></div>  
+    <br><br><br>
+    <div class="fade_rule"></div>  
+    <br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
     <!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-light active">
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -180,9 +288,11 @@
     <!-- Section: Links  -->
   </footer>
   <!-- Footer -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+<script src = "script.js"></script>
 </body>
 </html>

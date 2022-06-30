@@ -1,0 +1,51 @@
+[
+    {
+        "image" : "assets/Products/Shoes1.jpg",
+        "Model_Name": "Nike Neon pro",
+        "Price": "$120",
+        "Category": "Unisex"
+    },
+
+    {
+        "image" : "assets/Products/Shoes2.jpg",
+        "Model_Name": "Nike Hoppers ",
+        "Price": "$90",
+        "Category": "Unisex"
+    },
+
+    {
+        "image" : "assets/Products/Shoes3.jpg",
+        "Model_Name": "Nike Walkers",
+        "Price": "$75",
+        "Category": "Women"
+    },
+
+    {
+        "image" : "assets/Products/Shoes4.jpg",
+        "Model_Name": "Nike Air dark",
+        "Price": "$150",
+        "Category": "Men"
+    },
+
+    {
+        "image" : "assets/Products/Shoes5.jpg",
+        "Model_Name": "Nike Sentle Sneaker",
+        "Price": "$160",
+        "Category": "Women"
+    },
+
+    {
+        "image" : "assets/Products/Shoes6.jpg",
+        "Model_Name": "Nike Air Jordan",
+        "Price": "$500",
+        "Category": "Unisex"
+    },
+
+    {
+        "image" : "assets/Products/Shoes7.jpg",
+        "Model_Name": "Nike Flip Max",
+        "Price": "$550",
+        "Category": "Men"
+    }
+    
+]
