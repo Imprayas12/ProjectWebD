@@ -2,50 +2,56 @@
     {
         "image" : "assets/Products/Shoes1.jpg",
         "Model_Name": "Nike Neon pro",
-        "Price": "$120",
-        "Category": "Unisex"
+        "Price": "120",
+        "Category": "Unisex",
+        "inCart" : 0
     },
 
     {
         "image" : "assets/Products/Shoes2.jpg",
         "Model_Name": "Nike Hoppers ",
-        "Price": "$90",
-        "Category": "Unisex"
+        "Price": "90",
+        "Category": "Unisex",
+        "inCart" : 0
     },
 
     {
         "image" : "assets/Products/Shoes3.jpg",
         "Model_Name": "Nike Walkers",
-        "Price": "$75",
-        "Category": "Women"
+        "Price": "75",
+        "Category": "Women",
+        "inCart" : 0
     },
 
     {
         "image" : "assets/Products/Shoes4.jpg",
         "Model_Name": "Nike Air dark",
-        "Price": "$150",
+        "Price": "150",
         "Category": "Men"
+        ,"inCart" : 0
     },
 
     {
         "image" : "assets/Products/Shoes5.jpg",
         "Model_Name": "Nike Sentle Sneaker",
-        "Price": "$160",
-        "Category": "Women"
+        "Price": "160",
+        "Category": "Women",
+        "inCart" : 0
     },
 
     {
         "image" : "assets/Products/Shoes6.jpg",
         "Model_Name": "Nike Air Jordan",
-        "Price": "$500",
-        "Category": "Unisex"
+        "Price": "500",
+        "Category": "Unisex",
+        "inCart" : 0
     },
 
     {
         "image" : "assets/Products/Shoes7.jpg",
         "Model_Name": "Nike Flip Max",
-        "Price": "$550",
-        "Category": "Men"
-    }
-    
+        "Price": "550",
+        "Category": "Men",
+        "inCart" : 0
+    }   
 ]

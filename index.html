@@ -7,18 +7,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="path/to/fontawesome.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script type = "text/javascript">
+      var file;
+    </script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body style="background-color: linear-gradient(to-right,black,white)">
     <!-- This is the homepage for the shopping website. -->
         <div class = "card">
         <nav class = "navbar fixed-top navbar-expand-lg bg-dark navbar-dark py-4">
-            <a class = "navbar-brand" href="" style="font-size: 50;">HOPPER</a>
+            <a class = "navbar-brand brand-name" style="font-size:50px ;" href="" >HOPPER</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -26,11 +31,11 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class = "navbar-nav ml-auto">
                 <li class = "nav-item active align-icons">
-                    <a class = "nav-link" href="">Home</a>
+                    <a class = "nav-link" href="index.html">Home</a>
                 </li>
                 
                 <li class = "nav-item active align-icons">
-                    <a class = "nav-link" href="">Shop</a>
+                    <a class = "nav-link" href="all_products.html">Shop</a>
                 </li>
                 
                 <li class = "nav-item active align-icons">
@@ -39,10 +44,11 @@
                 <li class = "nav-item active align-icons">
                     <a class = "nav-link" href="">About Us</a>
                 </li>
-                <li class = "nav-item align-icons">
-                  <a href="index.html">
-                  <img src="assets\shopping-cart.png" alt="shopping-cart" height="30px" width="30px" style="padding-top: 5px;" srcset="">
-                </a>
+                <li class = "nav-item active d-flex justify-content-end">                
+                  <a class="navbar-brand" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span class ="countItem">0</span>
+                  </a>
+                  
                 </li>
                 <!-- <li class = "navbar-brand">
                     <a class = "nav-link" href="index.html">
@@ -63,7 +69,7 @@
       </div>
     </div> -->
     <br>
-    <br>
+    <br> <br><br><br><br> <br><br>
     
     <!-- <div class = "card text-center">
         <div class="card-body">
@@ -79,9 +85,9 @@
                 <div class="card-body" style="border: none;">
                     <h5 class="card-title display-4" style="font-weight: bold;" >Upto 80% off, this summer!</h5>
                     <br>
-                    <p class="card-text" style="font-size:40 ;" >Grab your favourite pair right now</p>
+                    <p class="card-text banner-text" style="font-size:40 ;" >Grab your favourite pair right now</p>
                     <br>
-                    <a href="#" class="btn btn-dark" id="banner-btn">Shop Now</a>
+                    <a href="all_products.html" class="btn btn-dark" id="banner-btn">Shop Now</a>
                   </div>
             </div>
         </div>
@@ -119,26 +125,18 @@
     <br><br>
     <div class="fade_rule"></div>  
     <br>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-md-center" style="width:80% ;" id="navbarsExample10">
-        <ul class="navbar-nav">
-          <li class="nav-item active list-item">
-            <a class="nav-link active" href="#">Men <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item list-item">
-            <a class="nav-link active" href="#">Women</a>
-          </li>
-          <li class="nav-item list-item">
-            <a class="nav-link active" href="#">Unisex</a>
-          </li>
+    <div class="row align-items-center" style="padding-left: 38%;">
+      <div class="col text-center">
+        <div class="new_arrivals_sorting">
+          <ul class="arrivals_grid_sorting clearfix button-group filters-button-group af">
+            <li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" role ="button" onclick = "filter_category('Men')" >Men</li>
+            <li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" role ="button" onclick = "filter_category('Women')" >Women</li>
+            <li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" role ="button" onclick = "filter_category('Unisex')" >Unisex</li>
         </ul>
       </div>
-    </nav>
-  <div class="objects">
+    </div>
+  </div>
+  <div class="objects" >
   </div>
 
 <br><br>
@@ -148,150 +146,116 @@
     <br><br><br>
     <div class="fade_rule"></div>  
     <br><br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    <!-- Footer -->
+    
+<br><br><br><br><br><br><br><br><br>
 <footer class="text-center text-lg-start bg-dark text-light active">
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <div class="me-5 d-none d-lg-block">
-        <span style="font-weight: bold; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI'; margin-left: auto;">Follow Us:</span>
-      </div>
-      <!-- Left -->
-  
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset align-icons">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset align-icons">
-          <i class="fab fa-twitter" ></i>
-        </a>
-        <a href="" class="me-4 text-reset align-icons">
-          <i class="fab fa-google" ></i>
-        </a>
-        <a href="" class="me-4 text-reset align-icons">
-          <i class="fab fa-instagram" ></i>
-        </a>
-        <a href="" class="me-4 text-reset align-icons">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-  
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-shoe-prints"><b>HOPPER</b></i>
-            </h6>
-            <br>
-            <p>
-              Your very own S<b>HOPPING</b> center.
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <p>
-              <a href="#!" class="text-reset">Home</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Men</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Women</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Kids</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <p>
-              <a href="#!" class="text-reset">Blogs</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Shopping</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Support</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Contact
-            </h6>
-              <i class="fas fa-envelope me-3"></i>
-              support@hopper.com
-            </p>
-            <p><i class="fas fa-phone me-3"></i> + 91 9876543210</p>
-            <p><i class="fas fa-print me-3"></i> + 92 9876543210</p>
-          </div>
-          <!-- Grid column -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset align-icons">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset align-icons">
+        <i class="fab fa-twitter" ></i>
+      </a>
+      <a href="" class="me-4 text-reset align-icons">
+        <i class="fab fa-google" ></i>
+      </a>
+      <a href="" class="me-4 text-reset align-icons">
+        <i class="fab fa-instagram" ></i>
+      </a>
+      <a href="" class="me-4 text-reset align-icons">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-shoe-prints"><b>HOPPER</b></i>
+          </h6>
+          <br>
+          <p>
+            Your very own S<b>HOPPING</b> center.
+          </p>
         </div>
-        <!-- Grid row -->
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <p>
+            <a href="#!" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Men</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Women</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Kids</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <p>
+            <a href="#!" class="text-reset">Blogs</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Shopping</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Support</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+            <i class="fas fa-envelope me-3"></i>
+            support@hopper.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 91 9876543210</p>
+          <p><i class="fas fa-print me-3"></i> + 92 9876543210</p>
+        </div>
+        <!-- Grid column -->
       </div>
-    </section>
-    <!-- Section: Links  -->
-  </footer>
-  <!-- Footer -->
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+</footer>
+<!-- Footer -->
+
+<script src="cart.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 <script src = "script.js"></script>
 </body>

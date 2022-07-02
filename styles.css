@@ -10,14 +10,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
 }
 .align-icons {
     margin-right: 50px;
 }
 .bg-image {
     width:100%; 
-    display: block; 
+    display: flex; 
     margin-left: auto; 
     margin-right: auto;
     border-image: auto; 
@@ -174,7 +174,7 @@ a {
   background-color: tomato;
 }
 
-#dropdownMenuButton {
+.dropdown-m {
   height: 50px;
   width: 100x;
   font-size: 15px;
@@ -189,4 +189,106 @@ a {
   font-family: 'Arima',sans-serif;
   border-radius: 10px;
   text-align: center;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix::before{
+  content: "";
+  display: table;
+}
+.af {
+  list-style: none;
+  margin-bottom: 0;
+}
+*, ::after,::before {
+  box-sizing: border-box;
+}
+.af {
+  display: block;
+  margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px
+}
+.grid_sorting_button.active {
+  color: #fff;
+  background: #fe4c50;
+}
+.grid_sorting_button:first-child {
+  margin-left: 0;
+}
+.grid_sorting_button {
+  height: 40px;
+  min-width: 102px;
+  padding-left: 25px;
+  padding-right: 25px;
+  cursor: pointer;
+  border: solid 1px #ebebeb;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #fff;
+  border-radius: 3px;
+  margin: 0;
+  float: left;
+  margin-left: -1px;
+}
+.align-items-center {
+  -ms-flex-align: center!important;
+  align-items: center!important;
+}
+.justify-content-center {
+  -ms-flex-pack: center!important;
+  justify-content: center!important;
+}
+.flex-column {
+  -ms-flex-direction: column!important;
+  flex-direction: column!important;
+}
+/* .d-flex {
+  display: -ms-flexbox!important;
+  display: flex!important;
+} */
+
+li:hover {
+  background-color: #3F4E4F;
+  color: #DCD7C9;
+}
+
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
+.countItem {
+  position: relative;
+  bottom: 12px;
+  font-size: 10px;
+}
+
+@media screen and (max-width:1000px){
+  .banner-text{
+      color:black;
+      font-size:3vw !important;
+  }
+  .bg-image {
+    filter: blur(8px);
+  } 
 }

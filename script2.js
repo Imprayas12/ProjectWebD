@@ -8,9 +8,10 @@ http.send();
 http.onload = function() {
     
     if(this.readyState == 4 && this.status == 200){
-        let SHOES = JSON.parse(this.responseText);
+      file = this.responseText;  
+      let SHOES = JSON.parse(this.responseText);
+      // SHOES.sort((a,b) => a.Price - b.Price);
         let output = "";
-        let i = 0;
         for(let item of SHOES){
             output += `
             <div class = "object card">
@@ -18,39 +19,41 @@ http.onload = function() {
                 <p class="Model_Name">${item.Model_Name}</p>
                 <p class="Category">${item.Category}</p>
                 <p class="price">
+                    <span>$</span>
                     <span>${item.Price}</span>
                 </p>
                 <a href = "#" class="btn btn-dark">Add to Cart</a>
             </div>
             `;
-            i += 1;
-            //if(i == 6) break;
         }
         document.querySelector('.Products').innerHTML = output;
     }
 }
-
-// function mySorter(object) {
-//     let = arr = JSON.parse(object);
-//     let output = "";
-//     for(let item of SHOES){
-//         output += `
-//         <div class = "object card">
-//         <img src="${item.image}" alt="${item.image}" >
-//             <p class="Model_Name">${item.Model_Name}</p>
-//             <p class="Category">${item.Category}</p>
-//             <p class="price">
-//                 <span>${item.Price}</span>
-//             </p>
-//             <a href = "#" class="btn btn-dark">Add to Cart</a>
-//         </div>
-//         `;
-//         //i += 1;
-//         //if(i == 6) break;
-//     }
-//     document.querySelector('.Products').innerHTML = output;
-// }
-
-// function SorterByAscending(){
-
-// }
+function sort(type){
+  console.log('sort');
+  let SHOES = JSON.parse(file);
+  if(type.match('asc'))
+  SHOES.sort((a,b) => a.Price - b.Price);
+  else if(type.match('dsc')){
+  SHOES.sort((a,b) => b.Price - a.Price);
+  }
+      let output = "";
+  //    SHOES= SHOES.filter(x => x.Category == id);
+      console.log(SHOES);
+      let i = 0;
+      for(let item of SHOES){
+          output += `
+          <div class = "object card">
+          <img src="${item.image}" alt="${item.image}" >
+              <p class="Model_Name">${item.Model_Name}</p>
+              <p class="Category">${item.Category}</p>
+              <p class="price">
+                  <span>$</span>
+                  <span>${item.Price}</span>
+              </p>
+              <a href = "#" class="btn btn-dark addToCart" >Add to Cart</a>
+          </div>
+          `;
+      }
+      document.querySelector('.Products').innerHTML = output;   
+}
