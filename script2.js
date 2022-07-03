@@ -57,3 +57,29 @@ function sort(type){
       }
       document.querySelector('.Products').innerHTML = output;   
 }
+
+function filter_(id){
+    console.log(id);
+    
+        let SHOES = JSON.parse(file);
+    //    SHOES.sort((a,b) => a.Price - b.Price);
+        let output = "";
+        SHOES= SHOES.filter(x => x.Category == id);
+        console.log(SHOES);
+        let i = 0;
+        for(let item of SHOES){
+            output += `
+            <div class = "object card">
+            <img src="${item.image}" alt="${item.image}" >
+                <p class="Model_Name">${item.Model_Name}</p>
+                <p class="Category">${item.Category}</p>
+                <p class="price">
+                    <span>$</span>
+                    <span>${item.Price}</span>
+                </p>
+                <a href = "#" class="btn btn-dark addToCart" >Add to Cart</a>
+            </div>
+            `;
+        }
+        document.querySelector('.Products').innerHTML = output;   
+}

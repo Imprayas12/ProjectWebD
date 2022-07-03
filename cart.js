@@ -1,7 +1,7 @@
 
-
 var c;
 window.onload = function() {
+    console.log(Products);
     console.log(file);
     cart = document.querySelectorAll('.addToCart');
     console.log(cart);
@@ -10,6 +10,9 @@ window.onload = function() {
         cart[i].addEventListener('click', () => {
             cartNumbers(products[i]);
             totalCost(products[i]);
+            Products.push(products[i]);
+            cartItems(Products);
+           // console.log(Products);
         })
     }
 }
@@ -37,3 +40,15 @@ function totalCost(product) {
     localStorage.setItem('totalCost',product.Price);
 }
 onLoadCart();
+
+function cartItems(product) {
+    let cartItem = localStorage.getItem('cartItems');
+    if(cartItem != null){
+        cartItem.push(product);
+        localStorage.setItem('cartItems',cartItem);
+    }
+    else{
+        localStorage.setItem('cartItems',product);
+    }
+    console.log(localStorage.getItem('cartItems'));
+}
