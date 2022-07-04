@@ -1,20 +1,21 @@
 
 var c;
-window.onload = function() {
-    console.log(Products);
-    console.log(file);
+window.onload = function cartAdder() {
+   // console.log(Products);
+   console.log(file);
+    c = file;
     cart = document.querySelectorAll('.addToCart');
-    console.log(cart);
+  //  console.log(cart);
     let products = JSON.parse(file);
     for(let i = 0; i < cart.length; i++){
         cart[i].addEventListener('click', () => {
-            cartNumbers(products[i]);
-            totalCost(products[i]);
-            Products.push(products[i]);
-            cartItems(Products);
-           // console.log(Products);
-        })
+            var prod = products[i];
+          //  console.log(products[i]);
+            cartNumbers(prod);
+            totalCost(prod);
+        });
     }
+   // loadCart();
 }
 
 function onLoadCart() {
@@ -38,17 +39,31 @@ function totalCost(product) {
     }
     else
     localStorage.setItem('totalCost',product.Price);
+
+    cartItems(product);
 }
 onLoadCart();
 
 function cartItems(product) {
-    let cartItem = localStorage.getItem('cartItems');
-    if(cartItem != null){
-        cartItem.push(product);
-        localStorage.setItem('cartItems',cartItem);
+    let id_arr = JSON.parse(localStorage.getItem('cartItems'));
+    if(id_arr == null){
+        arr = [[parseInt(product.p_id),1]];
+        localStorage.setItem('cartItems',JSON.stringify(arr));
     }
     else{
-        localStorage.setItem('cartItems',product);
+        var i = 0;
+        for(i = 0; i < id_arr.length; i++)
+        {
+            if(id_arr[i][0] == parseInt(product.p_id)){
+                id_arr[i][1] += 1;
+                break;
+            }
+        }
+        if(i == id_arr.length){
+            temp = [product.p_id,1];
+            id_arr.push(temp);
+        }
+        localStorage.setItem('cartItems',JSON.stringify(id_arr));
     }
-    console.log(localStorage.getItem('cartItems'));
 }
+

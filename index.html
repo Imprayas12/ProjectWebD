@@ -10,17 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="path/to/fontawesome.min.css">
-    <link rel="stylesheet" href="styles.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="styles.css">
     <script type = "text/javascript">
       var file;
-      var Products = [];
     </script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
 
 </head>
-<body style="background-color: linear-gradient(to-right,black,white)">
+<body style="overflow-x: hidden;">
     <!-- This is the homepage for the shopping website. -->
         <div class = "card">
         <nav class = "navbar fixed-top navbar-expand-lg bg-dark navbar-dark py-4">
@@ -46,7 +49,7 @@
                     <a class = "nav-link" href="">About Us</a>
                 </li>
                 <li class = "nav-item active d-flex justify-content-end">                
-                  <a class="navbar-brand" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  <a class="navbar-brand" href="my_cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <span class ="countItem">0</span>
                   </a>
                   
@@ -147,6 +150,69 @@
     <br><br><br>
     <div class="fade_rule"></div>  
     <br><br><br>
+
+    <div class = "post-container owl-carousel">
+      <div class="post">
+      <div class="image">
+        <img src="assets/Blogs/Blogs1.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="date"><i class="fas fa-calender-alt"></i></div>
+        <a href="#" class="title text-center">Title</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos</p>
+        <a href="#" class="link">Read More</a>
+        </div>
+      </div>
+
+    <div class="post">
+      <div class="image">
+        <img src="assets/Blogs/Blogs2.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="date"><i class="fas fa-calender-alt"></i></div>
+        <a href="#" class="title text-center">Title</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos</p>
+        <a href="#" class="link">Read More</a>
+        </div>
+      </div>
+
+    <div class="post">
+      <div class="image">
+        <img src="assets/Blogs/Blogs3.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="date"><i class="fas fa-calender-alt"></i></div>
+        <a href="#" class="title text-center">Title</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos</p>
+        <a href="#" class="link">Read More</a>
+        </div>
+      </div>
+
+    <div class="post">
+      <div class="image">
+        <img src="assets/Blogs/Blogs4.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="date"><i class="fas fa-calender-alt"></i></div>
+        <a href="#" class="title text-center">Title</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos</p>
+        <a href="#" class="link">Read More</a>
+        </div>
+      </div>
+
+    <div class="post">
+      <div class="image">
+        <img src="assets/Blogs/Blogs5.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="date"><i class="fas fa-calender-alt"></i></div>
+        <a href="#" class="title text-center">Title</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos</p>
+        <a href="#" class="link">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
     
 <br><br><br><br><br><br><br><br><br>
 <footer class="text-center text-lg-start bg-dark text-light active">
@@ -258,6 +324,36 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src = "script.js"></script>
+<script src= "script2.js"></script>
+<script src=" cart.js "></script>
+<script>
+  $(document).ready(function(){
+    $('.post-container').owlCarousel({
+      pagination:true,
+      autoplay:true,
+      autoplayTimeout:2000,
+      responsive : {
+        0 : {
+          item:1,
+          loop:true
+        },
+        200 : {
+          item:2,
+          loop:true
+        },
+        700 : {
+          item:3,
+          loop:true
+        },
+        1000 : {
+          item:0,
+          loop:true
+        }
+      }
+    })
+  })
+</script>
 </body>
 </html>

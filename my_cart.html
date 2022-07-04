@@ -11,15 +11,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="path/to/fontawesome.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="cart.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>My Cart</title>
 </head>
-<body>
-    <p class = "display-4 text-center heading">Check Out</p>
+<body onload = "loadCart()">
+    <!-- <p class = "display-4 text-center heading">Check Out</p> -->
+    <div class="cart-container">
+        <div class="Header">
+            <h3 class = "Heading">HOPPER</h3>
+            <h5 class = "Action"> Remove All </h5>
+            </div>
+            <div class="cart-Content">
+            <!-- <div class="Cart-Items"> -->
+                <!-- <div class="image-box">
+                <img src="assets/Products/Shoes1.jpg" style="height:120px;"/>
+                </div>
+                <div class= "about">
+                <h1 class= "title">Nike Neon Pro</h1>
+                    <br>
+                <h3 class= "subtitle">Size: UK 9</h3>
+                </div>
+                <div class="counter">
+                    <div class="btn">+</div>
+                    <div class="count">1</div>
+                    <div class="btn">-</div>
+                </div>
+                <div class= "prices">
+                    <div class="amount">$2.99</div>
+                    </div> -->
+            <!-- </div> -->
+        </div>
+            <hr> <div class="payment">
+                    </div>
+            
+    </div>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+<script src="cartContent.js"></script>
 </body>
 </html>

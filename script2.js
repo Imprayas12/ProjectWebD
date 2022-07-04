@@ -30,7 +30,7 @@ http.onload = function() {
     }
 }
 function sort(type){
-  console.log('sort');
+ // console.log('sort');
   let SHOES = JSON.parse(file);
   if(type.match('asc'))
   SHOES.sort((a,b) => a.Price - b.Price);
@@ -40,7 +40,6 @@ function sort(type){
       let output = "";
   //    SHOES= SHOES.filter(x => x.Category == id);
       console.log(SHOES);
-      let i = 0;
       for(let item of SHOES){
           output += `
           <div class = "object card">
@@ -51,7 +50,7 @@ function sort(type){
                   <span>$</span>
                   <span>${item.Price}</span>
               </p>
-              <a href = "#" class="btn btn-dark addToCart" >Add to Cart</a>
+              <a href = "#" role = "button" onclick = "cartAdder()" class="btn btn-dark addToCart" >Add to Cart</a>
           </div>
           `;
       }

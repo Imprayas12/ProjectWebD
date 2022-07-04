@@ -23,7 +23,7 @@ http.onload = function() {
                     <span>$</span>
                     <span>${item.Price}</span>
                 </p>
-                <a href = "#" class="btn btn-dark addToCart" >Add to Cart</a>
+                <a href = "" class="btn btn-dark addToCart" >Add to Cart</a>
             </div>
             `;
             i += 1;
