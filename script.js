@@ -58,6 +58,7 @@ function filter_category(id){
             i += 1;
             if(i == 6) break;
         }
-        document.querySelector('.objects').innerHTML = output;   
+        document.querySelector('.objects').innerHTML = output;
+        // document.getElementById('dropdownMenuButton').textContent = id;   
 }
 

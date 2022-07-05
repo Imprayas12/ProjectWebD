@@ -105,6 +105,7 @@
   padding: 20px;
   font-family: 'Arima',sans-serif;
   border-radius: 10px;
+  transition: cubic-bezier();
 }
 .object {
   padding: 10px;
@@ -351,3 +352,38 @@ background: #707070;
   text-decoration:overline;
 }
 
+.container-blog .row .col img {
+  width: 90%;
+  height: 100%;
+  padding-left: 20%;
+  padding-top: 1%;
+  padding-right: 0px;
+}
+
+.container-blog .row .col .text {
+  padding-right:30%;
+  padding-left: 4px;
+}
+.container-blog .row {
+  padding-bottom: 3vw;
+}
+
+.container-card {
+  border: #3F4E4F;
+  border-radius: 5px;
+}
+.container-card .row .col-md-3 {
+  background-color: grey; padding-top: 20px; padding-bottom: 20px; padding-left: 2px; padding-right: 2px;
+  border-radius: 2px;
+  border: 5px;
+  font-size: 20px;
+  color: white;
+  font-weight: bolder;
+}
+
+.container-card .row .col-md-3 p {
+  font-weight: 100;
+  color:#DCD7C9;
+  font-size: 15px;
+  padding-top: 8px;
+}

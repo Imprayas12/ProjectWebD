@@ -1,20 +1,24 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #3F4E4F, #2C3639);
-    height: 100vh;
-    display: flex;
+ 
+ /* height: 100vh; */
+    /* display: flex; */
     justify-content: center;
     align-items: center;
-    font-family: 'Arima','open-sans' !important;
+    /* font-family: 'Arima','open-sans' !important; */
 }
 .cart-container {
+    margin-left: 13%;
+    padding-top: 10%;
+    padding-bottom: 12%;
     width: 70%;
-    height: 85%;
+    height: 90%;
     background-color: #E4DCCF;
     border-radius: 20px;
     box-shadow: 5px 20px 15px 15px #A27B5C;
 }
+
 
 .Header{
     margin: auto;
@@ -25,7 +29,7 @@ body {
     align-items: center;
    }
    .Heading{
-    font-size: 50px;
+    font-size: 40px;
     font-family: auto !important;
     font-weight: 700;
     color: #2F3841;
@@ -42,12 +46,13 @@ body {
    .Cart-Items{
     margin: auto;
     width: 90%;
-    height: 30%;
     display: flex;
+    height: 40%;
     justify-content: space-between;
     align-items: center;
    }
 .image-box{
+    padding-top: 1vw;
     width: 15%;
     text-align: center;
     border-radius: 30px;
@@ -79,6 +84,7 @@ body {
 }
 
 .counter{
+    padding-top: 3vw;
     width: 15%;
     display: flex;
     justify-content: space-between;
@@ -88,7 +94,7 @@ body {
 .btn{
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     background-color: #3F4E4F;
     display: flex;
     justify-content: center;
@@ -112,13 +118,15 @@ body {
 }
 
 .amount{
-    padding-top: 5vw;
+    padding-top: 3vw;
     font-size: 26px;
     font-family: 'Arima';
     font-weight: 800;
     color: #202020;
 }
-
+.cart-Content{
+    padding-bottom: 0%;
+}
 hr{
     width: 66%;
     float: right;
@@ -138,6 +146,7 @@ hr{
     font-size: 22px;
     font-weight: 700;
     color: #202020;
+    font-family: 'Arima';
    }
    .items{
     font-size: 16px;
@@ -162,5 +171,5 @@ hr{
     font-size: 16px;
     font-family: 'Arima';
     font-weight: 600;
-    color: #E4DCCF;
+    color: #2F3841;
 }

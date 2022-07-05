@@ -15,6 +15,9 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="path/to/fontawesome.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script>
+      var file;
+    </script>
 </head>
 <body style = "overflow-x: hidden;">
     <div class="card">
@@ -35,13 +38,13 @@
                 </li>
                 
                 <li class="nav-item active align-icons">
-                    <a class="nav-link" href="">Blogs</a>
+                    <a class="nav-link" href="blogs.html">Blogs</a>
                 </li>
                 <li class="nav-item active align-icons">
-                    <a class="nav-link" href="">About Us</a>
+                    <a class="nav-link" href="#foot2">About Us</a>
                 </li>
                 <li class = "nav-item active d-flex justify-content-end">                
-                  <a class="navbar-brand" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  <a class="navbar-brand" href="my_cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <span class ="countItem ">0</span>
                   </a>
                   
@@ -55,25 +58,28 @@
 <div class="row">
   <div class="col" style="padding-left:10%;">
     <div class="dropdown menu">
-      <button class="btn btn-secondary dropdown-toggle dropdown-m" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Sort By
+      <span style="font-family: 'Arima'; font-weight: 600; font-size: 22px; padding-top: 1px ;">Sort By : </span> 
+      <button class="btn btn-secondary dropdown-toggle dropdown-m" style = "font-family: 'Arima'; font-weight: 600;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Relevance
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
-          <li role = "button" onclick = "sort('asc')"><a class="dropdown-item drpd-item"  href="#">Low to high</a></li>
-          <li role = "button" onclick = "sort('dsc')" ><a class="dropdown-item drpd-item" role = "button" href="#">High to low</a></li>
-          <li><a class="dropdown-item drpd-item" href="#">Don't sort</a></li>
+          <li role = "button" onclick = "sort('Ascending')"><a class="dropdown-item drpd-item"  href="#">Low to high</a></li>
+          <li role = "button" onclick = "sort('Descending')" ><a class="dropdown-item drpd-item" role = "button" href="#">High to low</a></li>
+          <li role = "button" onclick = "sort('Relevance')"><a class="dropdown-item drpd-item" href="#">Relevance</a></li>
         </div>
     </div>
   </div>
   <div class="col" style="padding-left:30% ;">
     <div class="dropdown menu">
-    <button class="btn btn-secondary dropdown-toggle dropdown-m" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Filter By
+      <span style="font-family: 'Arima'; font-weight: 600; font-size: 22px; padding-top: 1px ;" id="">Filter By : </span> 
+      <button class="btn btn-secondary dropdown-toggle dropdown-m" style = "font-family: 'Arima'; font-weight: 600;"type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        All Items        
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">  
         <li role = "button" onclick = "filter_('Men')"><a class="dropdown-item drpd-item" href="#">Men</a></li>
         <li role = "button" onclick = "filter_('Women')"><a class="dropdown-item drpd-item" href="#">Women</a></li>
         <li role = "button" onclick = "filter_('Unisex')"><a class="dropdown-item drpd-item" href="#">Unisex</a></li>
+        <li role = "button" onclick = "filter_('All')"><a class="dropdown-item drpd-item" href="#">All</a></li>
     </div>
   </div>
   </div>
@@ -83,7 +89,7 @@
         
       </div>
       <footer class="text-center text-lg-start bg-dark text-light active">
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" id = "foot2">
           <!-- Left -->
       
           <!-- Right -->
@@ -189,7 +195,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     <script src = "script2.js "></script>
-    <script src= " script.js "></script>
     <script src = "cart.js"></script>
+    <!-- <script src= "script.js"></script> -->
 </body>
 </html>

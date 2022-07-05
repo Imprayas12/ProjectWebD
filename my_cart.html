@@ -11,16 +11,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="path/to/fontawesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="cart.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="styles.css">
     <title>My Cart</title>
 </head>
-<body onload = "loadCart()">
+<body>
     <!-- <p class = "display-4 text-center heading">Check Out</p> -->
+    <div class = "card">
+        <nav class = "navbar fixed-top navbar-expand-lg bg-dark navbar-dark py-4">
+            <a class = "navbar-brand brand-name" style="font-size:50px ;" href="" >HOPPER</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class = "navbar-nav ml-auto">
+                <li class = "nav-item active align-icons">
+                    <a class = "nav-link" href="index.html">Home</a>
+                </li>
+                
+                <li class = "nav-item active align-icons">
+                    <a class = "nav-link" href="all_products.html">Shop</a>
+                </li>
+                
+                <li class = "nav-item active align-icons">
+                    <a class = "nav-link" href="blogs.html">Blogs</a>
+                </li>
+                <li class = "nav-item active align-icons">
+                    <a class = "nav-link" href="#foot3">About Us</a>
+                </li>
+                <li class = "nav-item active d-flex justify-content-end">                
+                  <a class="navbar-brand" href="my_cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span class ="countItem">0</span>
+                  </a>
+                  
+                </li>
+                <!-- <li class = "navbar-brand">
+                    <a class = "nav-link" href="index.html">
+                        <img class = "nav-link" src="assets\shopping-cart.png" widht="35" height = "35" alt="Shopping cart">    
+                    </a>
+                     <img class = "nav-link" src="assets\shopping-cart.png" widht="40" height = "40" alt="Shopping cart">
+                </li>-->
+            </ul>
+        </div>
+    </div>
     <div class="cart-container">
         <div class="Header">
-            <h3 class = "Heading">HOPPER</h3>
+            <h3 class = "Heading">Check Out Here</h3>
             <h5 class = "Action"> Remove All </h5>
             </div>
             <div class="cart-Content">
@@ -32,8 +71,9 @@
                 <h1 class= "title">Nike Neon Pro</h1>
                     <br>
                 <h3 class= "subtitle">Size: UK 9</h3>
-                </div>
-                <div class="counter">
+                </div> -->
+            <p class = "text-center" style = "padding-top:16% ; padding-bottom: 12%; font-weight:bold; font-size:35px;">You have not added anything in the cart yet.</p>
+           <!---     <div class="counter">
                     <div class="btn">+</div>
                     <div class="count">1</div>
                     <div class="btn">-</div>
@@ -47,11 +87,114 @@
                     </div>
             
     </div>
+    <br><br><br> <br><br>
+    <div style="background-color: #2C3639 !important;">
+    <footer class="text-center text-lg-start bg-dark text-light active" style="display: inline;">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" id = "foot3">
+          <!-- Left -->
+      
+          <!-- Right -->
+          <div>
+            <a href="" class="me-4 text-reset align-icons">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset align-icons">
+              <i class="fab fa-twitter" ></i>
+            </a>
+            <a href="" class="me-4 text-reset align-icons">
+              <i class="fab fa-google" ></i>
+            </a>
+            <a href="" class="me-4 text-reset align-icons">
+              <i class="fab fa-instagram" ></i>
+            </a>
+            <a href="" class="me-4 text-reset align-icons">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+      
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                    <i class="fas fa-shoe-prints"><b>HOPPER</b></i>
+                </h6>
+                <br>
+                <p>
+                  Your very own S<b>HOPPING</b> center.
+                </p>
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <p>
+                  <a href="#!" class="text-reset">Home</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Men</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Women</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Kids</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <p>
+                  <a href="#!" class="text-reset">Blogs</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Shopping</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Orders</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Support</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Contact
+                </h6>
+                  <i class="fas fa-envelope me-3"></i>
+                  support@hopper.com
+                </p>
+                <p><i class="fas fa-phone me-3"></i> + 91 9876543210</p>
+                <p><i class="fas fa-print me-3"></i> + 92 9876543210</p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+      </footer> </div>
+      <!-- Footer -->
+    
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
-
+<script src="cart.js"></script>
 <script src="cartContent.js"></script>
 </body>
 </html>

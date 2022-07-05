@@ -22,7 +22,7 @@ http.onload = function() {
                     <span>$</span>
                     <span>${item.Price}</span>
                 </p>
-                <a href = "#" class="btn btn-dark">Add to Cart</a>
+                <a href = "#" class="btn btn-dark addToCart">Add to Cart</a>
             </div>
             `;
         }
@@ -32,9 +32,9 @@ http.onload = function() {
 function sort(type){
  // console.log('sort');
   let SHOES = JSON.parse(file);
-  if(type.match('asc'))
+  if(type.match('Ascending'))
   SHOES.sort((a,b) => a.Price - b.Price);
-  else if(type.match('dsc')){
+  else if(type.match('Descending')){
   SHOES.sort((a,b) => b.Price - a.Price);
   }
       let output = "";
@@ -54,15 +54,17 @@ function sort(type){
           </div>
           `;
       }
-      document.querySelector('.Products').innerHTML = output;   
+      document.querySelector('.Products').innerHTML = output;
+      document.getElementById('dropdownMenuButton').textContent = type;
+
 }
 
 function filter_(id){
     console.log(id);
-    
         let SHOES = JSON.parse(file);
     //    SHOES.sort((a,b) => a.Price - b.Price);
         let output = "";
+        if(!id.match('All'))
         SHOES= SHOES.filter(x => x.Category == id);
         console.log(SHOES);
         let i = 0;
@@ -80,5 +82,6 @@ function filter_(id){
             </div>
             `;
         }
-        document.querySelector('.Products').innerHTML = output;   
+        document.querySelector('.Products').innerHTML = output; 
+        document.getElementById('dropdownMenuButton2').textContent = id;
 }
