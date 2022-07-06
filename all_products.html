@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="path/to/fontawesome.min.css">
     <link rel="stylesheet" href="styles.css">
     <script>
@@ -58,22 +59,22 @@
 <div class="row">
   <div class="col" style="padding-left:10%;">
     <div class="dropdown menu">
-      <span style="font-family: 'Arima'; font-weight: 600; font-size: 22px; padding-top: 1px ;">Sort By : </span> 
-      <button class="btn btn-secondary dropdown-toggle dropdown-m" style = "font-family: 'Arima'; font-weight: 600;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Relevance
+      
+      <button class="btn btn-secondary dropdown-toggle dropdown-m" style = "font-family: 'Arima'; font-weight: 400; font-size: 22px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span>Sort By : Relevance </span> 
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
-          <li role = "button" onclick = "sort('Ascending')"><a class="dropdown-item drpd-item"  href="#">Low to high</a></li>
-          <li role = "button" onclick = "sort('Descending')" ><a class="dropdown-item drpd-item" role = "button" href="#">High to low</a></li>
+          <li role = "button" onclick = "sort('Ascending')"><a class="dropdown-item drpd-item"  href="#">Ascending</a></li>
+          <li role = "button" onclick = "sort('Descending')" ><a class="dropdown-item drpd-item" role = "button" href="#">Descending</a></li>
           <li role = "button" onclick = "sort('Relevance')"><a class="dropdown-item drpd-item" href="#">Relevance</a></li>
         </div>
     </div>
   </div>
   <div class="col" style="padding-left:30% ;">
     <div class="dropdown menu">
-      <span style="font-family: 'Arima'; font-weight: 600; font-size: 22px; padding-top: 1px ;" id="">Filter By : </span> 
-      <button class="btn btn-secondary dropdown-toggle dropdown-m" style = "font-family: 'Arima'; font-weight: 600;"type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        All Items        
+       
+      <button class="btn btn-secondary dropdown-toggle dropdown-m" style = "font-family: 'Arima'; font-weight: 400; font-size: 22px;"type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span id="">Filter By : All</span>        
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">  
         <li role = "button" onclick = "filter_('Men')"><a class="dropdown-item drpd-item" href="#">Men</a></li>
@@ -88,6 +89,42 @@
       <div class="Products">
         
       </div>
+      <br> <br>
+
+      <div class="container">
+        <div class="container-card">
+      <div class="row justify-content-between">
+        <div class="col-md-3 text-center border">
+          <i class="fa-solid fa-truck"></i>
+         Free Shipping
+         <p>Zero Delivery Charges. Delivered with utmost care.</p>
+        </div>
+        
+        <div class="col-md-3 text-center border">
+          <i class="fa fa-money" aria-hidden="true"></i>
+          Cash On Delivery
+          <p>Pay with assurance. We deliver with an open-box policy.</p>
+        </div>
+        
+        <div class="col-md-3 text-center border">
+          <i class="fa fa-refresh" aria-hidden="true"></i>
+          45 Days Return Policy
+          <p>Don't force it if it's not working out.</p>
+        </div>
+        
+        <div class="col-md-3 text-center border">
+          <i class="fa-solid fa-clock"></i>
+          Open All Week
+          <p>Order Anytime throughout the week.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br> <br>
+
+    <br><br>
+  <h1 class = "text-center" style="font-family: auto ; font-weight: 500; font-size: 50px;">HOPPER</h1>
+<br><br><br><br>
       <footer class="text-center text-lg-start bg-dark text-light active">
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" id = "foot2">
           <!-- Left -->
@@ -122,8 +159,8 @@
               <!-- Grid column -->
               <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                 <!-- Content -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                    <i class="fas fa-shoe-prints"><b>HOPPER</b></i>
+                <h6 class="text-uppercase fw-bold mb-4" style = "font-family: auto;">
+                    <b>HOPPER</b>
                 </h6>
                 <br>
                 <p>

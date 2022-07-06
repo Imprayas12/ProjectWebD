@@ -55,7 +55,7 @@ function sort(type){
           `;
       }
       document.querySelector('.Products').innerHTML = output;
-      document.getElementById('dropdownMenuButton').textContent = type;
+      document.getElementById('dropdownMenuButton').textContent = "Sort By : " + type;
 
 }
 
@@ -83,5 +83,5 @@ function filter_(id){
             `;
         }
         document.querySelector('.Products').innerHTML = output; 
-        document.getElementById('dropdownMenuButton2').textContent = id;
+        document.getElementById('dropdownMenuButton2').textContent = "Filter By : " + id;
 }

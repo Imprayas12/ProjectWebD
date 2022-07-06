@@ -10,7 +10,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -50%);
 }
 .align-icons {
     margin-right: 50px;
@@ -373,7 +373,7 @@ background: #707070;
   border-radius: 5px;
 }
 .container-card .row .col-md-3 {
-  background-color: grey; padding-top: 20px; padding-bottom: 20px; padding-left: 2px; padding-right: 2px;
+  background-color: #3F4E4F; padding-top: 20px; padding-bottom: 20px; padding-left: 2px; padding-right: 2px;
   border-radius: 2px;
   border: 5px;
   font-size: 20px;
@@ -383,7 +383,9 @@ background: #707070;
 
 .container-card .row .col-md-3 p {
   font-weight: 100;
-  color:#DCD7C9;
+  color: white;
   font-size: 15px;
-  padding-top: 8px;
+  padding-top: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
