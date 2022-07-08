@@ -15,18 +15,22 @@ http.onload = function() {
         for(let item of SHOES){
             output += `
             <div class = "object card">
-            <img src="${item.image}" alt="${item.image}" >
+            <a role ="button" onmouseover = "loadModal(${item.p_id})" data-toggle="modal" data-target="#exampleModal">
+            <img src="${item.image}" alt="${item.image}" ></a>
                 <p class="Model_Name">${item.Model_Name}</p>
                 <p class="Category">${item.Category}</p>
                 <p class="price">
                     <span>$</span>
                     <span>${item.Price}</span>
                 </p>
-                <a href = "#" class="btn btn-dark addToCart">Add to Cart</a>
+                
+                <a href = "" class="btn btn-dark addToCart" >Add to Cart</a>
             </div>
             `;
         }
         document.querySelector('.Products').innerHTML = output;
+        // id = hehe(id);
+        // filter_(id);
     }
 }
 function sort(type){
@@ -43,14 +47,16 @@ function sort(type){
       for(let item of SHOES){
           output += `
           <div class = "object card">
-          <img src="${item.image}" alt="${item.image}" >
+          <a role ="button" onmouseover = "loadModal(${item.p_id})" data-toggle="modal" data-target="#exampleModal">
+          <img src="${item.image}" alt="${item.image}" ></a>
               <p class="Model_Name">${item.Model_Name}</p>
               <p class="Category">${item.Category}</p>
               <p class="price">
                   <span>$</span>
                   <span>${item.Price}</span>
               </p>
-              <a href = "#" role = "button" onclick = "cartAdder()" class="btn btn-dark addToCart" >Add to Cart</a>
+              
+              <a href = "" class="btn btn-dark addToCart" >Add to Cart</a>
           </div>
           `;
       }
@@ -71,17 +77,55 @@ function filter_(id){
         for(let item of SHOES){
             output += `
             <div class = "object card">
-            <img src="${item.image}" alt="${item.image}" >
+            <a role ="button" onmouseover = "loadModal(${item.p_id})" data-toggle="modal" data-target="#exampleModal">
+            <img src="${item.image}" alt="${item.image}" ></a>
                 <p class="Model_Name">${item.Model_Name}</p>
                 <p class="Category">${item.Category}</p>
                 <p class="price">
                     <span>$</span>
                     <span>${item.Price}</span>
                 </p>
-                <a href = "#" class="btn btn-dark addToCart" >Add to Cart</a>
+                
+                <a href = "" class="btn btn-dark addToCart" >Add to Cart</a>
             </div>
             `;
         }
         document.querySelector('.Products').innerHTML = output; 
         document.getElementById('dropdownMenuButton2').textContent = "Filter By : " + id;
+}
+
+
+function loadModal(product) {
+    let SHOES = JSON.parse(file);
+    SHOES = SHOES.filter(x => x.p_id == product);
+    let output = "";
+    for(let product of SHOES){
+    output += `<div class="modal-header">
+    .<h5 class="modal-title" id="exampleModalLabel" class = "text-center" >Product Details</h5
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="modal-body">
+  <h5 id="exampleModalLabel" class = "text-center" style = "font-family:'Arima'; font-weight:bolder;">${product.Model_Name}</h5>
+  <br>
+  <img src = "${product.image}" style = "height:22vw; width: 100%; border-radius:20px; box-shadow: 0px 9px 12px #707070;">
+  <br> <br>
+  <p class="Category text-center" style = "font-family:'Arima'; font-weight:bolder;">Category : ${product.Category}</p>
+  <p class="price text-center">
+      <span style = "font-family:'Arima'; font-weight:bolder;">Price : $${product.Price}</span>
+  </p>
+  <p class = "description text-center" style = "font-family: 'Arima'; font-weight:bolder;"> Description: Sizes available - UK 9, 10, 11, 12</p>
+  </div>
+  <div class="modal-footer">
+  <p class = "description text-center" style = "font-family: 'Arima'; font-weight:bolder; text-align:center;">Click anywhere outside the box to close.</p>
+  </div>`;
+    }
+  document.querySelector('.modal-content').innerHTML = output;
+  console.log("settled");
+  
+}
+
+function loadPage(id){
+    console.log('gotHere');
 }

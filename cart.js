@@ -14,7 +14,7 @@ window.onload = function cartAdder() {
             totalCost(prod);
         });
     }
-   // loadCart();
+   onLoadCart();
 }
 
 function onLoadCart() {
