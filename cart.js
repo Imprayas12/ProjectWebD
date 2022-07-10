@@ -18,8 +18,8 @@ window.onload = function cartAdder() {
 }
 
 function onLoadCart() {
-    let productNumber = localStorage.getItem('cartNumbers');
-    document.querySelector('.countItem').textContent = productNumber;
+    let productNumber = JSON.parse(localStorage.getItem('cartItems'));
+    document.querySelector('.countItem').textContent = productNumber.length;
 }
 function cartNumbers(product) {
     let productNumber = localStorage.getItem('cartNumbers');

@@ -133,5 +133,68 @@
         "Price": "750",
         "Category": "Men",
         "inCart" : 1
-    }   
+    },
+    {
+        "p_id" : 16,
+        "image" : "assets/Products/Shoes9.jpg",
+        "Model_Name": "Nike Air F",
+        "Price": "540",
+        "Category": "Men",
+        "inCart" : 1
+    },
+
+
+    {
+        "p_id" : 17,
+        "image" : "assets/Products/Shoes10.jpg",
+        "Model_Name": "Nike Air X",
+        "Price": "450",
+        "Category": "Women",
+        "inCart" : 1
+    },
+
+    {
+        "p_id" : 18,
+        "image" : "assets/Products/Shoes11.jpg",
+        "Model_Name": "Nike Factor-S",
+        "Price": "270",
+        "Category": "Men",
+        "inCart" : 1
+    },
+    
+    {
+        "p_id" : 19,
+        "image" : "assets/Products/Shoes12.jpg",
+        "Model_Name": "Nike Showset",
+        "Price": "600",
+        "Category": "Unisex",
+        "inCart" : 1
+    },
+
+    {
+        "p_id" : 20,
+        "image" : "assets/Products/Shoes13.jpg",
+        "Model_Name": "Nike latter",
+        "Price": "465",
+        "Category": "Men",
+        "inCart" : 1
+    },
+
+    {
+        "p_id" : 21,
+        "image" : "assets/Products/Shoes14.jpg",
+        "Model_Name": "Nike little latter",
+        "Price": "700",
+        "Category": "Men",
+        "inCart" : 1
+    },
+
+    {
+        "p_id" : 22,
+        "image" : "assets/Products/Shoes15.jpg",
+        "Model_Name": "Nike more latter",
+        "Price": "750",
+        "Category": "Men",
+        "inCart" : 1
+    }      
 ]

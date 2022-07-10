@@ -70,7 +70,8 @@ function filter_category(id){
         // document.getElementById('dropdownMenuButton').textContent = id;   
 }
 
-function cart(id){
+function carter(id){
+    console.log('here we are');
     let id_arr = JSON.parse(localStorage.getItem('cartItems'));
     if(id_arr == null){
         arr = [[parseInt(id),1]];
@@ -91,6 +92,13 @@ function cart(id){
         }
         localStorage.setItem('cartItems',JSON.stringify(id_arr));
     }
+    cartNumbers();
+    let f = JSON.parse(file);
+    f = f.filter(x => x.p_id == id);
+    // console.log(f[0]);
+    //totalCost(f[0]);
+    onLoadCart(); 
+    updateCart();
 }
 
 function loadModal(product) {
@@ -115,9 +123,11 @@ function loadModal(product) {
   document.querySelector('.modal-body').innerHTML = output;
 
   output = "";
-  output += `<button type="button" class="btn btn-dark" style="padding-right: 41.5%; padding-left: 41%;" onclick = "cart(${id})">Add to Cart</button>`;
+  output += `<button type="button" class="btn btn-dark" style="padding-right: 41.5%; padding-left: 41%;" onclick = "carter(${id})">Add to Cart</button>`;
   document.querySelector('.modal-footer').innerHTML = output;
   console.log("settled");
 }
-
+function updateCart(){
+    localStorage.getItem('cartItems');
+}
 

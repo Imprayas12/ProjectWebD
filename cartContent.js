@@ -32,7 +32,10 @@ function loadCart(){
                     <div class="btn"><a role = "button" onclick = "quantity('add',${item.p_id},${item.Price})">+</a></div>
                     <div class="count" id = "${items[i][0]}">${items[i][1]}</div>
                     <div class="btn"><a role = "button" onclick = "quantity('sub',${item.p_id},${item.Price})">-</a></div>
+                    <br>
                 </div>
+                
+                <div class = "btn" style = "display:block; margin-top:5%"><a role = "remover" onclick = "remove_item(${item.p_id},${item.Price})">&times;</a></div>
                 <div class= "prices">
                     <div class="amount">$${item.Price}</div>
                     </div> </div>`;
@@ -107,6 +110,25 @@ function quantity(change,id,price){
     
 }
 
+function remove_item(id,price) {
+    let arr = JSON.parse(localStorage.getItem('cartItems'));
+    let arr_new = [];
+    let amt = 0;
+    for(let i = 0; i< arr.length;i++){
+        if(arr[i][0] == id){
+            amt = parseInt(arr[i][1])*parseInt(price);
+            console.log(amt);
+            continue;
+        }
+        arr_new.push(arr[i]);
+    }
+    localStorage.setItem('cartItems',JSON.stringify(arr_new));
+    totaCost = parseInt(localStorage.getItem('totalCost'));
+    totaCost = totaCost - amt;
+    localStorage.setItem('totalCost',totaCost);
+    loadCart();
+    onLoadCart();
+}
 function remove(){
     localStorage.clear();
     window.location.reload();
