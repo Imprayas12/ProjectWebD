@@ -9,7 +9,6 @@ http.open('get','objects.json',true); //prepare request with open method
 http.send();
 
 http.onload = function() {
-    
     if(this.readyState == 4 && this.status == 200){
         file = this.responseText;
         let SHOES = JSON.parse(this.responseText);
@@ -123,7 +122,7 @@ function loadModal(product) {
   document.querySelector('.modal-body').innerHTML = output;
 
   output = "";
-  output += `<button type="button" class="btn btn-dark" style="padding-right: 41.5%; padding-left: 41%;" onclick = "carter(${id})">Add to Cart</button>`;
+  output += `<button type="button" class="btn btn-dark" style="font-family: 'Arima'; font-weight:bolder;padding-right: 41.5%; padding-left: 41%;" onclick = "carter(${id})">Add to Cart</button>`;
   document.querySelector('.modal-footer').innerHTML = output;
   console.log("settled");
 }

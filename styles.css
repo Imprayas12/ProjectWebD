@@ -438,3 +438,26 @@ li:hover {
   background-color: #DCD7C9;
   color: black;
 }
+.post-container .post .image {
+  margin-left: 2%; margin-right:2%; padding-top: 2%;
+}
+
+.post-container .post {
+  box-shadow: 0px 9px 12px #707070;
+  margin-bottom: 18px;
+}
+
+.container .container-card {
+  box-shadow: 0px 5px 10px #3F4E4F !important;
+}
+
+.head {
+  font-family: auto; 
+  font-weight: 500; 
+  font-size: 50px;
+}
+
+.A_ctive {
+  background-color: #a3a3a3;
+  color:black;
+}

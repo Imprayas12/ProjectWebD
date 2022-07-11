@@ -8,7 +8,6 @@ http.open('get','objects.json',true); //prepare request with open method
 http.send();
 
 http.onload = function() {
-    
     if(this.readyState == 4 && this.status == 200){
       file = this.responseText;  
       let SHOES = JSON.parse(this.responseText);
@@ -150,7 +149,7 @@ function loadModal(product) {
   document.querySelector('.modal-body').innerHTML = output;
 
   output = "";
-  output += `<button type="button" class="btn btn-dark" style="padding-right: 41.5%; padding-left: 41%;" onclick = "carter(${id})">Add to Cart</button>`;
+  output += `<button type="button" class="btn btn-dark" style="font-family: 'Arima'; font-weight:bolder;padding-right: 41.5%; padding-left: 41%;" onclick = "carter(${id})">Add to Cart</button>`;
   document.querySelector('.modal-footer').innerHTML = output;
   console.log("settled");
   
@@ -163,7 +162,7 @@ function loadPagination(){
     let pages = "";
     for(let i = 1; i<= no_Of_pages; i++){
         pages+= `
-        <li class="page-item" ><a href = "#" style = "background-color:white" class="page-link" id = '${i}' onclick = "loadItemPage(${i})">${i}</a></li>
+        <li class="page-item"><button href = "#" class="page-link" id = '${i}' onmouseover = "select_option()" onclick = "loadItemPage(${i})">${i}</button></li>
         `;
     }
     console.log(pages);
@@ -193,4 +192,25 @@ function loadItemPage(start) {
             </div>`;
     }
     document.querySelector('.Products').innerHTML = output;
+}
+
+
+function makeActive(id) {
+    document.getElementById(id).classList.add('Active');
+}
+
+var activeButton = null;
+function select_option(){
+    var btns = document.querySelectorAll('.page-link');
+    console.log(btns);
+    for(let i = 0; i< btns.length; i++){
+        btns[i].addEventListener('click', () =>{
+            return function(){
+                if(activeButton)
+                    activeButton.classList.remove('active');
+                activeButton = this;
+                activeButton.classList.add('active');
+            }
+        });
+    }
 }

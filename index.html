@@ -23,37 +23,35 @@
   </script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-</head>
+  </head>
 
 <body style="overflow-x: hidden;">
   <!-- This is the homepage for the shopping website. -->
-  <div class="card">
+  <div class="card" id = "Header">
     <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark py-4">
-      <a class="navbar-brand brand-name" style="font-size:50px ;" href="">HOPPER</a>
+      <a class="navbar-brand brand-name head" href="">HOPPER</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+  
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active align-icons">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link " id = "Home" href="index.html">Home</a>
           </li>
-
-          <li class="nav-item active align-icons">
-            <a class="nav-link" href="all_products.html">Shop</a>
+  
+          <li class="nav-item align-icons">
+            <a class="nav-link" id = "Shop" href="all_products.html">Shop</a>
           </li>
-
-          <li class="nav-item active align-icons">
-            <a class="nav-link" href="blogs.html">Blogs</a>
+  
+          <li class="nav-item align-icons">
+            <a class="nav-link" id = "Blogs" href="blogs.html">Blogs</a>
           </li>
-          <li class="nav-item active align-icons">
-            <a class="nav-link" href="#foot">About Us</a>
+          <li class="nav-item align-icons">
+            <a class="nav-link" id = "AboutUs" href="#foot">About Us</a>
           </li>
-          <li class="nav-item active d-flex justify-content-end">
+          <li class="nav-item d-flex justify-content-end">
             <a class="navbar-brand" href="my_cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
               <span class="countItem">0</span>
             </a>
@@ -134,7 +132,7 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content" style="border-radius: 10px; background-color: antiquewhite;">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Product Details</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -161,8 +159,8 @@
   <br><br><br>
 
   <div class="post-container owl-carousel">
-    <div class="post" style="box-shadow: 0px 9px 12px #707070;">
-      <div class="image" style="margin-left: 2%; margin-right:2%; padding-top: 2%;">
+    <div class="post">
+      <div class="image" >
         <img src="assets/Blogs/Blogs1.jpg" alt="">
       </div>
       <div class="content">
@@ -173,8 +171,8 @@
       </div>
     </div>
 
-    <div class="post" style="box-shadow: 0px 9px 12px #707070;">
-      <div class="image" style="margin-left: 2%; margin-right:2%; padding-top: 2%;">
+    <div class="post">
+      <div class="image" >
         <img src="assets/Blogs/Blogs2.jpg" alt="">
       </div>
       <div class="content">
@@ -185,8 +183,8 @@
       </div>
     </div>
 
-    <div class="post" style="box-shadow: 0px 9px 12px #707070;">
-      <div class="image" style="margin-left: 2%; margin-right:2%; padding-top: 2%;">
+    <div class="post">
+      <div class="image">
         <img src="assets/Blogs/Blogs3.jpg" alt="">
       </div>
       <div class="content">
@@ -197,8 +195,8 @@
       </div>
     </div>
 
-    <div class="post" style="box-shadow: 0px 9px 12px #707070;">
-      <div class="image" style="margin-left: 2%; margin-right:2%; padding-top: 2%;">
+    <div class="post">
+      <div class="image">
         <img src="assets/Blogs/Blogs4.jpg" alt="">
       </div>
       <div class="content">
@@ -209,8 +207,8 @@
       </div>
     </div>
 
-    <div class="post" style="box-shadow: 0px 9px 12px #707070;">
-      <div class="image" style="margin-left: 2%; margin-right:2%; padding-top: 2%;">
+    <div class="post" >
+      <div class="image">
         <img src="assets/Blogs/Blogs5.jpg" alt="">
       </div>
       <div class="content">
@@ -224,7 +222,7 @@
   </div>
   <br><br><br> <br> <br>
   <div class="container">
-    <div class="container-card shadow" style="box-shadow: 0px 5px 10px #3F4E4F !important;">
+    <div class="container-card shadow">
       <div class="row justify-content-between">
         <div class="col-md-3 text-center border rounded-left">
           <i class="fa-solid fa-truck"></i>
@@ -253,7 +251,7 @@
     </div>
   </div>
   <br><br><br><br><br>
-  <h1 class="text-center" style="font-family: auto ; font-weight: 500; font-size: 50px;">HOPPER</h1>
+  <h1 class="text-center head">HOPPER</h1>
   <br><br><br><br>
   <footer class="text-center text-lg-start bg-dark text-light active">
     <section class="d-flex justify-content-center justify-content-center p-4 border-bottom" id="foot">

@@ -49,14 +49,16 @@ function loadCart(){
 
     }
     output = "";
-    let number = localStorage.getItem('cartNumbers');
+    let number = JSON.parse(localStorage.getItem('cartItems'));
+    if(number!=0){
     let cost = localStorage.getItem('totalCost');
     output += `
+    <hr>
     <div class= "checkout">
     <div class= "total">
     <div>
     <div class= "Subtotal" >Sub-Total</div>
-    <div class= "items">${number} items</div>
+    <div class= "items">${number.length} items</div>
     </div>
     <div class= "total-amount">$${cost}</div>
     </div>
@@ -65,6 +67,7 @@ function loadCart(){
     `;
     console.log(output);
     document.querySelector('.payment').innerHTML = output;
+    }
 }
 
 function alert_message(message) {
@@ -128,6 +131,7 @@ function remove_item(id,price) {
     localStorage.setItem('totalCost',totaCost);
     loadCart();
     onLoadCart();
+    window.location.reload();
 }
 function remove(){
     localStorage.clear();
