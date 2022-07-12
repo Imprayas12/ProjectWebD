@@ -120,13 +120,15 @@ function carter(id){
         localStorage.setItem('cartItems',JSON.stringify(id_arr));
     }
     cartNumbers();
-    let f = JSON.parse(file);
-    f = f.filter(x => x.p_id == id);
     // console.log(f[0]);
     //totalCost(f[0]);
     onLoadCart(); 
+    updateCart();
 }
 
+function updateCart(){
+    localStorage.getItem('cartItems');
+}
 function loadModal(product) {
     let SHOES = JSON.parse(file);
     SHOES = SHOES.filter(x => x.p_id == product);
@@ -136,7 +138,7 @@ function loadModal(product) {
     output += `
   <h5 id="exampleModalLabel" class = "text-center" style = "font-family:'Arima'; font-weight:bolder;">${product.Model_Name}</h5>
   <br>
-  <img src = "${product.image}" style = "height:22vw; width: 100%; border-radius:20px; box-shadow: 0px 9px 12px #707070;">
+  <img src = "${product.image}" style = "height:21vw; width: 100%; border-radius:20px; box-shadow: 0px 9px 12px #707070;">
   <br> <br>
   <p class="Category text-center" style = "font-family:'Arima'; font-weight:bolder;">Category : ${product.Category}</p>
   <p class="price text-center">
@@ -162,7 +164,7 @@ function loadPagination(){
     let pages = "";
     for(let i = 1; i<= no_Of_pages; i++){
         pages+= `
-        <li class="page-item"><button href = "#" class="page-link" id = '${i}' onmouseover = "select_option()" onclick = "loadItemPage(${i})">${i}</button></li>
+        <li class="page-item"><button href = "#" class="page-link border-dark" id = '${i}' onclick = "loadItemPage(${i})">${i}</button></li>
         `;
     }
     console.log(pages);
@@ -171,6 +173,8 @@ function loadPagination(){
 
 function loadItemPage(start) {
     page = start;
+    // window.location.reload();
+    changeColor(page);
     var startPoint = (start == 1)? 1 : (start-1) * 9 + 1;
     let arr = JSON.parse(file);
     let html = "";
@@ -200,17 +204,11 @@ function makeActive(id) {
 }
 
 var activeButton = null;
-function select_option(){
-    var btns = document.querySelectorAll('.page-link');
-    console.log(btns);
-    for(let i = 0; i< btns.length; i++){
-        btns[i].addEventListener('click', () =>{
-            return function(){
-                if(activeButton)
-                    activeButton.classList.remove('active');
-                activeButton = this;
-                activeButton.classList.add('active');
-            }
-        });
+var prev = 0;
+function changeColor(page){
+    if(prev!=0){
+        document.getElementById(prev).style.backgroundColor = '#fff';
     }
+    document.getElementById(page).style.backgroundColor = '#DCD7C9';
+    prev = page;
 }

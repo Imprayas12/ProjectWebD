@@ -62,6 +62,7 @@ function loadCart(){
     </div>
     <div class= "total-amount">$${cost}</div>
     </div>
+    <button class = "button" onclick = "load_home()">Continue Shopping</button>
     <button class = "button" onclick = "alert_message('Your Order has been placed')">Place Order</button>
     </div>
     `;
@@ -76,7 +77,9 @@ function alert_message(message) {
         window.location.href = "index.html";
     }
 }
-
+function load_home(){
+    window.location.href = "index.html";
+}
 function quantity(change,id,price){
 
     console.log('gothere');
