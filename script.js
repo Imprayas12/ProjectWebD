@@ -92,8 +92,8 @@ function carter(id){
         localStorage.setItem('cartItems',JSON.stringify(id_arr));
     }
     cartNumbers();
-    let f = JSON.parse(file);
-    f = f.filter(x => x.p_id == id);
+    // let f = JSON.parse(file);
+    // f = f.filter(x => x.p_id == id);
     // console.log(f[0]);
     //totalCost(f[0]);
     onLoadCart(); 

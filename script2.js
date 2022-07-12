@@ -35,7 +35,6 @@ http.onload = function() {
     }
     loadPagination();
     loadItemPage(page);
-    document.querySelectorAll("li.page-item")[0].click();
 }
 function sort(type){
  // console.log('sort');
@@ -120,8 +119,6 @@ function carter(id){
         localStorage.setItem('cartItems',JSON.stringify(id_arr));
     }
     cartNumbers();
-    // console.log(f[0]);
-    //totalCost(f[0]);
     onLoadCart(); 
     updateCart();
 }
