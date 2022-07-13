@@ -33,8 +33,6 @@ http.onload = function() {
         // id = hehe(id);
         // filter_(id);
     }
-    loadPagination();
-    loadItemPage(page);
 }
 function sort(type){
  // console.log('sort');
@@ -123,9 +121,7 @@ function carter(id){
     updateCart();
 }
 
-function updateCart(){
-    localStorage.getItem('cartItems');
-}
+
 function loadModal(product) {
     let SHOES = JSON.parse(file);
     SHOES = SHOES.filter(x => x.p_id == product);
@@ -151,61 +147,4 @@ function loadModal(product) {
   output += `<button type="button" class="btn btn-dark" style="font-family: 'Arima'; font-weight:bolder;padding-right: 41.5%; padding-left: 41%;" onclick = "carter(${id})">Add to Cart</button>`;
   document.querySelector('.modal-footer').innerHTML = output;
   console.log("settled");
-  
-}
-function loadPagination(){
-    let no_Of_pages = 0
-    let no_of_items = JSON.parse(file).length;
-    console.log(no_of_items);
-    no_Of_pages = Math.ceil(no_of_items/9);
-    let pages = "";
-    for(let i = 1; i<= no_Of_pages; i++){
-        pages+= `
-        <li class="page-item"><button href = "#" class="page-link border-dark" id = '${i}' onclick = "loadItemPage(${i})">${i}</button></li>
-        `;
-    }
-    console.log(pages);
-    document.querySelector('.pages').innerHTML = pages;
-}
-
-function loadItemPage(start) {
-    page = start;
-    // window.location.reload();
-    changeColor(page);
-    var startPoint = (start == 1)? 1 : (start-1) * 9 + 1;
-    let arr = JSON.parse(file);
-    let html = "";
-    let output = "";
-    for(let i = startPoint - 1; i< startPoint + 8 && i < arr.length;i++){
-        let item = arr[i];
-        output += `
-        <div class = "object card">
-            <a role ="button" onmouseover = "loadModal(${item.p_id})" data-toggle="modal" data-target="#exampleModal">
-            <img src="${item.image}" alt="${item.image}" ></a>
-                <p class="Model_Name">${item.Model_Name}</p>
-                <p class="Category">${item.Category}</p>
-                <p class="price">
-                    <span>$</span>
-                    <span>${item.Price}</span>
-                </p>
-                
-                <a href = "" class="btn btn-dark addToCart" >Add to Cart</a>
-            </div>`;
-    }
-    document.querySelector('.Products').innerHTML = output;
-}
-
-
-function makeActive(id) {
-    document.getElementById(id).classList.add('Active');
-}
-
-var activeButton = null;
-var prev = 0;
-function changeColor(page){
-    if(prev!=0){
-        document.getElementById(prev).style.backgroundColor = '#fff';
-    }
-    document.getElementById(page).style.backgroundColor = '#DCD7C9';
-    prev = page;
 }
