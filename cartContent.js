@@ -21,7 +21,7 @@ function loadCart(){
                 output += `
                 <div class = "Cart-Items">
                 <div class="image-box">
-                <img src="${item.image}" style="height:120px;"/>
+                <img src="${item.image}"/>
                 </div>
                 <div class= "about">
                 <h1 class= "title">${item.Model_Name}</h1>
@@ -35,7 +35,7 @@ function loadCart(){
                     <br>
                 </div>
                 
-                <div class = "btn" style = "display:block; margin-top:5%"><a role = "remover" onclick = "remove_item(${item.p_id},${item.Price})">&times;</a></div>
+                <div class = "btn" style = "display:auto; margin-top:5%; margin-left:2%"><a role = "remover" onclick = "remove_item(${item.p_id},${item.Price})">&times;</a></div>
                 <div class= "prices">
                     <div class="amount">$${item.Price}</div>
                     </div> </div>`;
@@ -62,6 +62,7 @@ function loadCart(){
     </div>
     <div class= "total-amount">$${cost}</div>
     </div>
+    
     <button class = "button" onclick = "load_home()">Continue Shopping</button>
     <button class = "button" onclick = "alert_message('Your Order has been placed')">Place Order</button>
     </div>
@@ -110,8 +111,6 @@ function quantity(change,id,price){
             }); 
             break;
         }
-    // }
-    // document.querySelector('.count').innerHTML = id_arr[i][1];
     }
     
 }

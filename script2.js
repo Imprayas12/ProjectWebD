@@ -35,7 +35,6 @@ http.onload = function() {
     }
 }
 function sort(type){
- // console.log('sort');
   let SHOES = JSON.parse(file);
   if(type.match('Ascending'))
   SHOES.sort((a,b) => a.Price - b.Price);
@@ -43,8 +42,6 @@ function sort(type){
   SHOES.sort((a,b) => b.Price - a.Price);
   }
       let output = "";
-  //    SHOES= SHOES.filter(x => x.Category == id);
-      console.log(SHOES);
       for(let item of SHOES){
           output += `
           <div class = "object card">

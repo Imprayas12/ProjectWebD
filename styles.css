@@ -5,7 +5,7 @@
 }
 
 .brand-name {
-  font-size: 50px;
+  font-size: 3.255vw;
 }
 
 .centered {
@@ -29,7 +29,7 @@
 }
 
 .container {
-  width: 100%;
+  width: 80%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -43,13 +43,13 @@
 .container img {
   width: 100%;
   height: auto;
-  margin-left: 15px;
-  margin-right: 5px;
+  margin-left: 0.97vw;
+  margin-right: 0.32vw;
 }
 
 .container .btn {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -90,11 +90,24 @@
   width: 100%;
   margin-top: 30px;
 }
-
+.new_arrivals_sorting ul li {
+  font-size: 1.5vw;
+}
+.banner-img img {
+  box-shadow: 0px 0.32vw 0.65vw #3F4E4F !important; border-radius: 0.32vw !important;
+}
+.banner-img button {
+  display:flex;
+  font-size: 1.5vw !important;
+}
+.banner-img .btn {
+  background: none;
+  border: 0.16vw !important; 
+}
 .fade_rule {
   height: 1px;
   background-color: #E6E6E6;
-  width: 66.0em;
+  width: 80%;
   margin: 0 auto;
   background-image: linear-gradient(left, white 2%, #E6E6E6 50%, white 98%);
   background-image: -o-linear-gradient(left, white 2%, #E6E6E6 50%, white 98%);
@@ -123,6 +136,9 @@
   background-color: #DCD7C9;
 }
 
+.object {
+  display: flex;
+}
 .object img {
   width: 100%;
   display: block;
@@ -151,6 +167,10 @@
   color: black;
   padding-top: 10px;
   font-family: 'Arima';
+}
+
+.display-2 {
+  font-size: 5vw;
 }
 
 a {
@@ -314,13 +334,11 @@ li:hover {
 }
 
 @media screen and (max-width:1100px) {
-  .banner-text {
-    color: black;
-    font-size: 3vw !important;
-  }
-
   .bg-image {
+    margin-top: 0;
+    display: block;
     filter: blur(8px);
+    margin-bottom: 2vw;
   }
 }
 
@@ -388,8 +406,8 @@ li:hover {
 }
 
 .container-blog .row .col img {
-  width: 85%;
-  height: 93%;
+  width: 32.55vw;
+  height: 29.29vw;
   border-radius: 20px !important;
   margin-left: 5%;
   margin-top: 1%;
@@ -400,9 +418,18 @@ li:hover {
 
 .container-blog .row .col .text {
   padding-right: 30%;
-  padding-left: 4px;
+  padding-left: 0.26vw;
 }
 
+.container-blog .row .col .text h2 {
+  font-size: 2.5vw;
+}
+.container-blog .row .col .text p {
+  font-size: 1.04vw;
+}
+.container-blog .row .col .text .date {
+  font-size: 1.04vw;
+}
 .container-blog .row {
   padding-bottom: 3vw;
 }
@@ -457,7 +484,8 @@ li:hover {
   font-size: 50px;
 }
 
-.A_ctive {
-  background-color: #a3a3a3;
-  color:black;
+.blog-head {
+  font-size: 4vw;
+  font-weight:500;
+  margin-top: 5vw;
 }

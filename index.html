@@ -25,39 +25,40 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
-<body style="overflow-x: hidden;">
+<body style="overflow-x:hidden;">
   <!-- This is the homepage for the shopping website. -->
-  <div class="card" id = "Header">
+  <div class="card">
     <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark py-4">
-      <a class="navbar-brand brand-name head" href="">HOPPER</a>
+      <a class="navbar-brand brand-name" href="">HOPPER</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active align-icons">
-            <a class="nav-link " id = "Home" href="index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
-  
+
           <li class="nav-item align-icons">
-            <a class="nav-link" id = "Shop" href="all_products.html">Shop</a>
+            <a class="nav-link " href="all_products.html">Shop</a>
           </li>
-  
-          <li class="nav-item align-icons">
-            <a class="nav-link" id = "Blogs" href="blogs.html">Blogs</a>
+
+          <li class="nav-item  align-icons">
+            <a class="nav-link" href="blogs.html">Blogs</a>
           </li>
           <li class="nav-item align-icons">
-            <a class="nav-link" id = "AboutUs" href="#foot">About Us</a>
+            <a class="nav-link" href="#foot2">About Us</a>
           </li>
           <li class="nav-item d-flex justify-content-end">
             <a class="navbar-brand" href="my_cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-              <span class="countItem">0</span>
+              <span class="countItem ">0</span>
             </a>
           </li>
         </ul>
       </div>
+    </nav>
   </div>
   <br>
   <br> <br><br><br><br>
@@ -66,11 +67,11 @@
     <div class="centered">
       <div class="card text-center" style="background: transparent; border: none;">
         <div class="card-body" style="border: none;">
-          <h5 class="card-title display-4" style="font-weight: bold;">Upto 80% off, this summer!</h5>
+          <h5 class="card-title display-4" style="font-weight: bold; font-size: 3.5vw;">Upto 80% off, this summer!</h5>
           <br>
-          <p class="card-text banner-text" style="font-size:40 ;">Grab your favourite pair right now</p>
+          <p class="card-text banner-text" style="font-size:3vw ;">Grab your favourite pair right now</p>
           <br>
-          <a href="all_products.html" class="btn btn-dark" style="font-size: 25px;" id="banner-btn">Shop Now</a>
+          <a href="all_products.html" class="btn btn-dark" style="font-size: 1.5vw;" id="banner-btn">Shop Now</a>
         </div>
       </div>
     </div>
@@ -80,22 +81,22 @@
   <!-- Categories -->
   <br><br>
   <p class="display-2 text-center">Categories</p>
-  <br><br><br>
+  <br>
   <div class="fade_rule"></div>
-  <br><br><br>
+  <br>
   <div class="fade_rule"></div>
   <br><br>
   <div class="row banner" style="padding-left: 8px;">
     <div class="container column banner-img">
-      <img src="assets\Categories\male.jpg" alt="Men" style="box-shadow: 0px 5px 10px #3F4E4F !important; border-radius: 5px !important;">
-      <button class="btn" style="font-weight: bolder;" onclick="loadPage('Men');">Men</button>
+      <img src="assets\Categories\male.jpg" alt="Men" >
+      <button class="btn" style="font-weight: bolder;">Men</button>
     </div>
     <div class="container column banner-img">
-      <img src="assets\Categories\female.jpg" style="box-shadow: 0px 5px 10px #3F4E4F !important; border-radius: 5px !important" alt="Women">
+      <img src="assets\Categories\female.jpg"  alt="Women">
       <button class="btn" style="font-weight: bolder;">Women</button>
     </div>
     <div class="container column banner-img">
-      <img src="assets\Categories\unisex.jpg" style="box-shadow: 0px 5px 10px #3F4E4F !important; border-radius: 5px !important;" alt="Unisex">
+      <img src="assets\Categories\unisex.jpg" alt="Unisex">
       <button class="btn" style="font-weight: bolder;">Unisex</button>
     </div>
     <!-- <div class="container column">
@@ -108,7 +109,7 @@
   <br><br>
   <div class="fade_rule"></div>
   <br>
-  <div class="row align-items-center" style="padding-left: 35%;">
+  <div class="row align-items-center" style="padding-left: 35.5%; padding-right: 35%; display: flexbox;" >
     <div class="col text-center">
       <div class="new_arrivals_sorting">
         <ul class="arrivals_grid_sorting clearfix button-group filters-button-group af">
@@ -144,7 +145,7 @@
       </div>
       <div class="modal-footer text-center">
         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-        <button type="button" class="btn btn-dark" style="padding-right: 41.5%; padding-left: 41%;">Add to Cart</button>
+        <button type="button" class="btn btn-dark" style="width:stretch">Add to Cart</button>
       </div>
     </div>
   </div>
@@ -152,9 +153,9 @@
 
   <br><br>
   <p class="display-2 text-center">Latest Blogs</p>
-  <br><br><br>
+  <br><br>
   <div class="fade_rule"></div>
-  <br><br><br>
+  <br>
   <div class="fade_rule"></div>
   <br><br><br>
 
@@ -374,7 +375,6 @@
   <script>
     $(document).ready(function () {
       $('.post-container').owlCarousel({
-        pagination: true,
         autoplay: true,
         autoplayTimeout: 2000,
         responsive: {

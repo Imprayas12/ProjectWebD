@@ -15,10 +15,28 @@ body {
     width: 70%;
     height: 90%;
     background-color: #E4DCCF;
-    border-radius: 20px;
+    border-radius: 1.30vw;
     box-shadow: 0px 9px 12px #707070;;
 }
 
+@media screen and (max-width:1000px) {
+    .cart-container{
+        padding-bottom: 19%;
+    }
+    .btn {
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
+    }
+}
+@media screen and (max-width:800px) {
+    .cart-container{
+        padding-bottom: 24%;
+    }
+    .btn {
+        margin-left: 0.4vw;
+        margin-right: 0.6vw;
+    }
+}
 
 .Header{
     margin: auto;
@@ -29,13 +47,13 @@ body {
     align-items: center;
    }
    .Heading{
-    font-size: 40px;
+    font-size: 2.60vw;
     font-family: auto !important;
     font-weight: 700;
     color: #2F3841;
    }
    .Action{
-    font-size: 14px;
+    font-size: 0.911vw;
     font-family: 'Arima';
     text-decoration: none;
     font-weight: 600;
@@ -55,11 +73,13 @@ body {
     padding-top: 1vw;
     width: 15%;
     text-align: center;
-    border-radius: 30px;
+    border-radius: 1.95vw;
    
 }
 .image-box img {
-    border-radius: 20px;
+    border-radius: 1.3vw;
+    display: flex;
+    height:7.81vw;
 }
 
 .about{
@@ -68,16 +88,16 @@ body {
 
 .title{
     padding-top: 5vw;
-    line-height: 10px;
-    font-size: 32px;
+    line-height: 0.65vw;
+    font-size: 2.09vw;
     font-family: 'Arima';
     font-weight: 800;
     color: #202020;
 }
 
 .subtitle{
-    line-height: 10px;
-    font-size: 18px;
+    line-height: 0.65vw;
+    font-size: 1.23vw;
     font-family: 'Arima';
     font-weight: 600;
     color: #909090;
@@ -92,14 +112,14 @@ body {
 }
 
 .btn{
-    width: 40px;
-    height: 40px;
+    width: 2.60vw;
+    height: 2.60vw;
     /* border-radius: 50%; */
     background-color: #3F4E4F;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 1.30vw;
     font-family: 'Arima';
     font-weight: 900;
     color: #fff;
@@ -107,7 +127,7 @@ body {
 }
 
 .count{
-    font-size: 20px;
+    font-size: 1.30vw;
     font-weight: 900;
     color: #202020;
 }
@@ -119,7 +139,7 @@ body {
 
 .amount{
     padding-top: 3vw;
-    font-size: 26px;
+    font-size: 1.69vw;
     font-family: 'Arima';
     font-weight: 800;
     color: #202020;
@@ -143,33 +163,35 @@ hr{
     justify-content: space-between;
    }
    .Subtotal{
-    font-size: 22px;
+    font-size: 1.43vw;
     font-weight: 700;
     color: #202020;
     font-family: 'Arima';
    }
    .items{
-    font-size: 16px;
+    font-size: 1.04vw;
     font-weight: 500;
     color: #909090;
-    line-height: 10px;
+    line-height: 0.65vw;
    }
    .total-amount{
-    font-size: 36px;
+    font-size: 1.69vw;
     font-family:'Arima';
     font-weight: 900;
     color: #202020;
    }
 .button{
-    margin-top: 5px;
+    margin-top: 0.37vw;
     width: 100%;
-    height: 40px;
+    height: 2.60vw;
     border: none;
     background: #3F4E4F;
-    border-radius: 5px;
+    border-radius: 0.37vw;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.04vw;
     font-family: 'Arima';
     font-weight: 600;
     color: white;
 }
+
+

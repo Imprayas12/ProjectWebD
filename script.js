@@ -1,5 +1,3 @@
-var script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
 document.getElementsByTagName('head')[0].appendChild(script);
 
 let http = new XMLHttpRequest(); //http-request object.
@@ -109,7 +107,7 @@ function loadModal(product) {
     output += `
   <h5 id="exampleModalLabel" class = "text-center" style = "font-family:'Arima'; font-weight:bolder;">${product.Model_Name}</h5>
   <br>
-  <img src = "${product.image}" style = "height:21vw; width: 100%; border-radius:20px; box-shadow: 0px 9px 12px #707070;">
+  <img src = "${product.image}" style = "height:21vw; border-radius:1.30vw; margin-left:auto;margin-right:auto;display:block; box-shadow: 0px 9px 12px #707070;">
   <br> <br>
   <p class="Category text-center" style = "font-family:'Arima'; font-weight:bolder;">Category : ${product.Category}</p>
   <p class="price text-center">
