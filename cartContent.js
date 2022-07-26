@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', (e) => {
 function loadCart(){
     // console.log("I am running");
     let output = "";
-    let totalCost = 0;
     let items = JSON.parse(localStorage.getItem('cartItems'));
     for(let i = 0; i< items.length; i++){
         let id = items[i][0];
@@ -39,10 +38,8 @@ function loadCart(){
                 <div class= "prices">
                     <div class="amount">$${item.Price}</div>
                     </div> </div>`;
-                    totalCost += item.Price * items[i][1];
                 }
                 // console.log(output);
-                localStorage.setItem('totalCost',totalCost);
                 document.querySelector('.cart-Content').innerHTML = output;
             });
         });

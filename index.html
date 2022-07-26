@@ -89,20 +89,16 @@
   <div class="row banner" style="padding-left: 8px;">
     <div class="container column banner-img">
       <img src="assets\Categories\male.jpg" alt="Men" >
-      <button class="btn" style="font-weight: bolder;">Men</button>
+     <a href="all_products.html" onclick="saveFilter('Men')"> <button class="btn" style="font-weight: bolder;">Men</button></a>
     </div>
     <div class="container column banner-img">
       <img src="assets\Categories\female.jpg"  alt="Women">
-      <button class="btn" style="font-weight: bolder;">Women</button>
+     <a href = "all_products.html" onclick="saveFilter('Women')"> <button class="btn" style="font-weight: bolder;">Women</button></a>
     </div>
     <div class="container column banner-img">
       <img src="assets\Categories\unisex.jpg" alt="Unisex">
-      <button class="btn" style="font-weight: bolder;">Unisex</button>
+     <a href="all_products.html" onclick="saveFilter('Unisex')"> <button class="btn" style="font-weight: bolder;">Unisex</button></a>
     </div>
-    <!-- <div class="container column">
-      <img src="assets\Categories\all.jpg" alt="Multipurpose">
-      <button class="btn">Multipurpose</button>
-    </div> -->
   </div>
   <br><br><br><br>
   <p class="display-2 text-center">New Arrivals</p>
@@ -397,6 +393,11 @@
         }
       })
     })
+  </script>
+  <script>
+    function saveFilter(category){
+      localStorage.setItem('category',category);
+    }
   </script>
 </body>
 </html>

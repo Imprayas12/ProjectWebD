@@ -25,13 +25,13 @@ http.onload = function() {
                     <span>${item.Price}</span>
                 </p>
                 
-                <a href = "" class="btn btn-dark addToCart" >Add to Cart</a>
+                <a href = "" class="btn btn-dark addToCart" onclick = "carter(${item.p_id},${item.Price})">Add to Cart</a>
             </div>
             `;
         }
         document.querySelector('.Products').innerHTML = output;
-        // id = hehe(id);
-        // filter_(id);
+        cat = localStorage.getItem('category');
+        if(cat!= null) filter_(cat);
     }
 }
 function sort(type){
@@ -54,7 +54,7 @@ function sort(type){
                   <span>${item.Price}</span>
               </p>
               
-              <a href = "" class="btn btn-dark addToCart" >Add to Cart</a>
+              <a href = "" class="btn btn-dark addToCart" onclick = "carter(${item.p_id},${item.Price})" >Add to Cart</a>
           </div>
           `;
       }
@@ -84,15 +84,23 @@ function filter_(id){
                     <span>${item.Price}</span>
                 </p>
                 
-                <a href = "" class="btn btn-dark addToCart" >Add to Cart</a>
+                <a href = "" class="btn btn-dark addToCart" onclick = "carter(${item.p_id},${item.Price})" >Add to Cart</a>
             </div>
             `;
         }
         document.querySelector('.Products').innerHTML = output; 
         document.getElementById('dropdownMenuButton2').textContent = "Filter By : " + id;
 }
-function carter(id){
+function carter(id,price){
     console.log('here we are');
+    let totalCost = localStorage.getItem('totalCost');
+    if(totalCost!=null){
+    totalCost = parseInt(totalCost) + parseInt(price);
+    }
+    else {
+        totalCost = price;
+    }
+    localStorage.setItem('totalCost',totalCost);
     let id_arr = JSON.parse(localStorage.getItem('cartItems'));
     if(id_arr == null){
         arr = [[parseInt(id),1]];
@@ -141,7 +149,7 @@ function loadModal(product) {
   document.querySelector('.modal-body').innerHTML = output;
 
   output = "";
-  output += `<button type="button" class="btn btn-dark" style="font-family: 'Arima'; font-weight:bolder;padding-right: 41.5%; padding-left: 41%;" onclick = "carter(${id})">Add to Cart</button>`;
+  output += `<button type="button" class="btn btn-dark" style="font-family: 'Arima'; font-weight:bolder;padding-right: 41.5%; padding-left: 41%;" onclick = "carter(${id},${price})">Add to Cart</button>`;
   document.querySelector('.modal-footer').innerHTML = output;
   console.log("settled");
 }

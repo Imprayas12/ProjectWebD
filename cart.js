@@ -6,13 +6,13 @@ window.onload = function cartAdder() {
   //  console.log(cart);
     let products = JSON.parse(file);
     for(let i = 0; i < cart.length; i++){
-        cart[i].addEventListener('click', () => {
-            console.log("Clicked");
-            var prod = products[i];
-           console.log(prod);
-            cartNumbers(prod);
-            totalCost(prod);
-        });
+        // cart[i].addEventListener('click', () => {
+        //     console.log("Clicked");
+        //     var prod = products[i];
+        //    console.log(prod);
+        //     cartNumbers(prod);
+        //     totalCost(prod);
+        // });
     }
    onLoadCart();
 }
