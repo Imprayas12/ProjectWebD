@@ -31,7 +31,10 @@ http.onload = function() {
         }
         document.querySelector('.Products').innerHTML = output;
         cat = localStorage.getItem('category');
-        if(cat!= null) filter_(cat);
+        if(cat!= null) {
+            filter_(cat);
+            localStorage.removeItem('category');
+        }
     }
 }
 function sort(type){
