@@ -1,5 +1,3 @@
-document.getElementsByTagName('head')[0].appendChild(script);
-
 let http = new XMLHttpRequest(); //http-request object.
 
 http.open('get','objects.json',true); //prepare request with open method
