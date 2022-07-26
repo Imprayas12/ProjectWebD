@@ -73,10 +73,8 @@ function loadCart(){
 }
 
 function alert_message(message) {
-    if(confirm(alert(message))){
         localStorage.clear();
-        window.location.href = "index.html";
-    }
+        window.location.href = "order_Placed.html";
 }
 function load_home(){
     window.location.href = "index.html";
